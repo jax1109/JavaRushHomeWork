@@ -3,7 +3,7 @@ package com.javarush.test.level06.lesson11.home04;
 /* Минимальное количество static-ов
 Расставьте минимальное количество static-ов, чтобы код начал работать, и программа успешно завершилась
 */
-
+/*
 public class Solution
 {
     public int step;
@@ -33,3 +33,4 @@ public class Solution
         main(null);
     }
 }
+*/
