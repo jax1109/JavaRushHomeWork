@@ -9,10 +9,18 @@ package com.javarush.test.level06.lesson11.home05;
 
 public class Solution
 {
+    public static void printIdea(Idea idea){
+        System.out.println(idea.getDescription());
+    }
     public static void main(String[] args)
     {
         printIdea(new Idea());
     }
 
     //Добавьте тут класс Idea
+    public static class Idea {
+        public String getDescription(){
+            return "idea!!!";
+        }
+    }
 }
