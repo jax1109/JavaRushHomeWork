@@ -17,6 +17,7 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+<<<<<<< HEAD
         int[] array = new int[20];
         int  maximum = 0;
         int  minimum = 0;
@@ -43,6 +44,15 @@ public class Solution
         //напишите тут ваш код
 
         System.out.print(maximum);
+=======
+        int  maximum;
+        int  minimum;
+
+        //напишите тут ваш код
+
+
+        System.out.println(maximum);
+>>>>>>> origin/master
         System.out.println(minimum);
     }
 }
