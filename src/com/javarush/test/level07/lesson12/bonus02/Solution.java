@@ -34,16 +34,18 @@ public class Solution
             list.add(s);
         }
 
-        ArrayList<String> listUpperCase = new ArrayList<String>();
+
         for (int i = 0; i < list.size(); i++)
         {
-            String s = list.get(i);
-            listUpperCase.add(s.toUpperCase());
-        }
 
-        for (int i = 0; i < listUpperCase.size(); i++)
-        {
-            System.out.println(listUpperCase.get(i));
+            String s = list.get(i);
+            int n = s.length();
+            if ((n%2)==0){
+                System.out.println(s +' '+ s);
+            }
+
+            else System.out.println(s +' '+ s + ' '+s);
+
         }
     }
 }
