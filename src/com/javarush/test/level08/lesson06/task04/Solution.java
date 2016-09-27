@@ -34,6 +34,7 @@ public class Solution
 
         get10000(list);
         Date currentTime2 = new Date();
+
         long mslength_ArrayList = currentTime2.getTime() - currentTime1.getTime();
 
         return mslength_ArrayList;
