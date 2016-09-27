@@ -23,9 +23,12 @@ public class Solution
         //напишите тут ваш код
         Date currentTime1 = new Date();
         insert10000(list);
-                Date currentTime2 = new Date();
+
+        Date currentTime2 = new Date();
         long mslength_ArrayList = currentTime2.getTime() - currentTime1.getTime();
+
         return mslength_ArrayList;
+
         //напишите тут ваш код
 
     }
