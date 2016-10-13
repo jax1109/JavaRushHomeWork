@@ -2,46 +2,63 @@ package com.javarush.test.level08.lesson08.task03;
 
 import java.util.HashMap;
 import java.util.HashSet;
-
-
-/* Одинаковые имя и фамилия
-Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя».
-Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
-*/
+import java.util.Map;
 
 public class Solution
 {
+
+    public static void main(String[] args)
+    {
+        HashMap<String, String> map = createMap();
+        System.out.println(getCountTheSameFirstName(map,"Антон"));
+        System.out.println(getCountTheSameLastName(map,"Иванов"));
+    }
+
     public static HashMap<String, String> createMap()
     {
-        //напишите тут ваш код
-        HashMap<String, String> map = new HashMap<String, String>();
-        map.put("Петров" , "Евгений");
-        map.put("Сидоров" , "Евгений");
-        map.put("Шнур" , "Евгений");
-        map.put("Петров" , "Сергей");
-        map.put("Иванов" , "Иван");
-        map.put("Петров" , "Евгений");
-        map.put("Петров" , "Евгений");
-        map.put("Петров" , "Евгений");
-        map.put("Петров" , "Евгений");
+        //Напишите тут ваш код
+        HashMap<String,String> map = new HashMap<String, String>();
+
+        map.put("Сергеев", "Антон");
+        map.put("Иванов", "Петя");
+        map.put("Стаханов", "Жора");
+        map.put("Сталин", "Иосиф");
+        map.put("Куриев", "Артур");
+        map.put("Сколов", "Антон");
+        map.put("Воробев", "Станичлав");
+        map.put("Сергеева", "Антон");
+        map.put("Глодин", "Паша");
+        map.put("Кинг", "Стивен");
         return map;
     }
 
     public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
     {
-        //напишите тут ваш код
-
-        for (HashMap.Entry<String, String> pair : map.entrySet())
+        //Напишите тут ваш код
+        int count=0;
+        for (Map.Entry<String,String> pair : map.entrySet())
         {
-            String key = pair.getKey();                      //ключ
-            String value = pair.getValue();                  //значение
-            System.out.println(key + ":" + value);
+            String value = pair.getValue();
+            if (name.equals(value))
+            {
+                count++;
+            }
         }
+        return count;
     }
 
-    public static int getCountTheSameLastName(HashMap<String, String> map, String lastName)
+    public static int getCountTheSameLastName(HashMap<String, String> map, String familiya)
     {
-        //напишите тут ваш код
-
+        //Напишите тут ваш код
+        int count=0;
+        for (Map.Entry<String,String> pair : map.entrySet())
+        {
+            String key = pair.getKey();
+            if (familiya.equals(key))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
